@@ -1,0 +1,46 @@
+{
+  "outer": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 142387.45103620144
+  },
+  "water_chamber": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 48002.3626761713
+  },
+  "angled_42_jets": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 47846.81469463196
+  },
+  "thread_connector_flat_local": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 3527.0252104060505
+  },
+  "thread_connector_flat": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 3527.0252104060423
+  },
+  "final": {
+    "valid": true,
+    "solids": 1,
+    "volume_mm3": 50789.50541154756
+  },
+  "summary": {
+    "closed_mesh": true,
+    "triangles": 40256,
+    "jet_count": 42,
+    "jet_angle_degrees": 19.47122063449069,
+    "tangent_circle_diameter": 17.333333333333332,
+    "body_length": 50,
+    "flat_plane_x": -25,
+    "thread_pitch": 1.8142857142857143,
+    "thread_major_diameter": 20.955,
+    "thread_minor_diameter": 18.63152774285714,
+    "physical_fit_tested": false,
+    "original_mouth_fillets_simplified": true
+  }
+}

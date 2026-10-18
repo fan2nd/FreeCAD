@@ -1,0 +1,12 @@
+{
+  "single_valid_solid": true,
+  "42_jet_centerlines_clear": true,
+  "inlet_centerline_clear": true,
+  "height_50mm": true,
+  "stl_closed": true,
+  "3mf_closed_positive_volume": true,
+  "3mf_volume_mm3": 50774.43359375,
+  "cad_volume_mm3": 50789.50541154743,
+  "thread_geometry": "96 helical segments per revolution, 55 degree nominal profile, G1/2 basic diameters and pitch",
+  "physical_fit_tested": false
+}
