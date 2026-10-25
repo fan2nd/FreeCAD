@@ -1,0 +1,35 @@
+# FreeCAD 自动备份与恢复文件；正式 FCStd / STEP / STL / 3MF 均保留
+*.FCBak
+*.FCStd[0-9]*
+*.fcstd[0-9]*
+*.bak
+*.autosave
+*~
+
+# 系统与编辑器临时文件
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+
+# Python 缓存与本地运行环境
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# 临时输出，不忽略工程内的正式导出与预览
+/tmp/
+/temp/
+*.tmp
+
+# 本地历史草案、说明和迁移记录
+/.local/
+
+# 构建生成的校验报告
+/projects/**/reports/
