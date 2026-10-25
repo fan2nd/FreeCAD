@@ -16,7 +16,11 @@ def obj(n,label,s,c):
  if A.GuiUp:o.ViewObject.ShapeColor=c
  return o
 screen_holes=[(-24.5,45.5),(24.5,45.5),(-25.5,103.5),(24.5,103.5)]
-board_holes=[(x,y) for x in [-22.55,22.55] for y in [33.45,80.55]]
+# Center the 52mm PCB between the screen screw rows at 45.5 and 103.5.
+board_y=(45.5+103.5-52)/2
+board_shift=board_y-31
+board_holes=[(x,y+board_shift) for x in [-22.55,22.55] for y in [33.45,80.55]]
+rib_rear_y=22
 frame=box(-36.4,0,-3,72.8,112,3)
 frame=frame.makeFillet(4,[e for e in frame.Edges if e.BoundBox.ZLength>2.9 and e.CenterOfMass.y>111])
 opening=box(-17.5,14,-12,34,100,16)
@@ -38,8 +42,8 @@ foot=foot.removeSplitter()
 combined=tr(frame).fuse(foot).removeSplitter()
 # Straight ribs with vertical rear edges, without rib fillets.
 for x in [-36.4,32.4]:
- # Y=18 leaves clearance to the closest estimated USB plug envelope.
- rib_top_local_y=(18-2*math.cos(math.radians(15)))/math.sin(math.radians(15))
+ # Enlarge the straight ribs after raising the PCB; retain USB plug clearance.
+ rib_top_local_y=(rib_rear_y-2*math.cos(math.radians(15)))/math.sin(math.radians(15))
  low=place.multVec(V(x,1,-2));high=place.multVec(V(x,rib_top_local_y,-2))
  tip=V(x,high.y,3)
  rib=Part.Face(Part.makePolygon([low,high,tip,low])).extrude(V(4,0,0))
@@ -52,16 +56,16 @@ frame_obj=obj('OnePieceStand','V2一体支架 · 主板背装 · 短底座',comb
 screen=box(-36.4,0,5,72.8,129,5.6)
 for x,y in screen_holes:screen=screen.fuse(cyl(x,y,0,2.7,5).cut(cyl(x,y,0,1.25,4)))
 screen_obj=obj('Screen','屏幕参考 · FPC在上',tr(screen),(.14,.15,.17))
-pcb=box(-25,31,-9.6,50,52,1.6)
+pcb=box(-25,board_y,-9.6,50,52,1.6)
 for x,y in board_holes:pcb=pcb.cut(cyl(x,y,-10,1.4,3))
 pcb_obj=obj('PCB','主板背装 · 元件朝后 · 柱高5外径6',tr(pcb),(.12,.29,.20))
-lcd=obj('LCD','LCD座示意 · 向上出线',tr(box(0,70,-12.6,23,4,3)),(.82,.81,.72))
+lcd=obj('LCD','LCD座示意 · 向上出线',tr(box(0,70+board_shift,-12.6,23,4,3)),(.82,.81,.72))
 port=obj('ScreenFPC','屏幕上部FPC示意',tr(box(-11,95,1,22,7,3)),(.82,.81,.72))
-net=box(-27,60,-23.6,21,17,14)
-usb=box(-28,52,-24.6,20,7,15)
-power=box(21,52.5,-13.6,7,9,4)
+net=box(-27,60+board_shift,-23.6,21,17,14)
+usb=box(-28,52+board_shift,-24.6,20,7,15)
+power=box(21,52.5+board_shift,-13.6,7,9,4)
 ios=[obj('Ethernet','网口估算包络',tr(net),(.65,.68,.7)),obj('USBData','USB数据口估算包络',tr(usb),(.65,.68,.7)),obj('USBPower','供电USB估算包络',tr(power),(.65,.68,.7))]
-plugs=[box(-65,57,-32,38,23,24),box(-65,49,-32,37,14,25),box(28,49,-22,37,16,15)]
+plugs=[box(-65,57+board_shift,-32,38,23,24),box(-65,49+board_shift,-32,37,14,25),box(28,49+board_shift,-22,37,16,15)]
 screws=[]
 for x,y in screen_holes:screws.append(tr(cyl(x,y,-3,1.25,6).fuse(cyl(x,y,-4.8,2.25,1.8))))
 for x,y in board_holes:screws.append(tr(cyl(x,y,-9.6,1.25,6).fuse(cyl(x,y,-11.4,2.25,1.8))))
@@ -79,7 +83,8 @@ for s in [net,usb,power]+plugs:
 # Check every PCB screw from the rear, including a 6mm driver shaft.
 for x,y in screen_holes:
  assert combined.common(tr(cyl(x,y,-4.8,2.25,1.8))).Volume<1e-6
- assert combined.common(tr(cyl(x,y,-143,3,139.99))).Volume<1e-6
+ tool=tr(cyl(x,y,-143,2.5,139.99))
+ for fixed in [combined,tr(pcb),tr(net),tr(usb),tr(power),lcd.Shape]:assert fixed.common(tool).Volume<1e-6
 for x,y in board_holes:
  tool=tr(cyl(x,y,-149.6,3,140))
  for fixed in [combined,tr(screen),tr(net),tr(usb),tr(power),lcd.Shape]:assert fixed.common(tool).Volume<1e-6
@@ -93,13 +98,13 @@ m=MeshPart.meshFromShape(Shape=print_shape,LinearDeflection=.06,AngularDeflectio
 assert m.isSolid();m.write(str(PRINT/'V2一体支架_屏幕侧朝下.stl'))
 Part.export([frame_obj],str(MODELS/'V2一体支架_主板背装.step'))
 sheet=d.addObject('Spreadsheet::Sheet','Dimensions')
-rows=[('屏幕','竖屏后倾15度；中间四孔；FPC朝上；四孔固定，无前沿承托'),('底座','宽72.8；原52深坯料裁去前沿，后端Y=38；厚4'),('主板','平行屏幕背装，元件朝后；LCD向上'),('PCB支柱','高5、外径6、底孔2.1深6'),('螺丝','屏幕4颗M2.5×6，主板4颗M2.5×6自攻'),('结构','一体式，不分件，不增加连接螺丝'),('打印','屏幕安装面直接贴床，全部材料在平面后方'),('装配','先装屏幕，再从背面固定主板'),('说明','接口为估算包络；稳定性未实测')]
-rows.extend([('屏幕固定片','上下统一厚3mm，取消下部凸台'),('加强筋','两侧各厚4mm，后缘Y=18竖直，直边无圆角；上端收短避让USB')])
+rows=[('屏幕','竖屏后倾15度；中间四孔；FPC朝上；四孔固定，无前沿承托'),('底座','宽72.8；原52深坯料裁去前沿，后端Y=38；厚4'),('主板','平行屏幕背装，元件朝后；LCD向上；下沿48.5，上沿100.5，位于屏幕四孔之间'),('PCB支柱','高5、外径6、底孔2.1深6'),('螺丝','屏幕4颗M2.5×6，主板4颗M2.5×6自攻'),('结构','一体式，不分件，不增加连接螺丝'),('打印','屏幕安装面直接贴床，全部材料在平面后方'),('装配','先装屏幕，再从背面固定主板'),('说明','接口为估算包络；稳定性未实测')]
+rows.extend([('屏幕固定片','上下统一厚3mm，取消下部凸台'),('加强筋','两侧各厚4mm，后缘Y=22竖直，直边无圆角；随主板上移增大，避让USB')])
 for i,(k,v) in enumerate(rows,1):sheet.set('A'+str(i),k);sheet.set('B'+str(i),v)
 sheet.setColumnWidth('A',180);sheet.setColumnWidth('B',420)
 d.recompute();d.saveAs(str(MODELS/'V2主板背装_短底座.FCStd'))
-report={'valid':combined.isValid(),'solids':len(combined.Solids),'parts':1,'base_width':72.8,'base_rear_y':38,'base_blank_depth_before_front_trim':52,'front_trimmed_to_screen_mount_plane':True,'pcb_standoff_height':5,'pcb_standoff_diameter':6,'pcb_rear_driver_clearance_diameter':6,'pcb_rear_driver_clearance_length':140,'screen_supported_by':'four screws, no front lip','extra_base_screws':0,'printing':'screen-facing mounting plane directly on bed; one piece','mounting_plane_height_above_print_bed':-zmin,'connector_dimensions':'photo estimate','stability':'not validated; PCB mass moved higher'}
-report.update({'screen_web_thickness':3,'lower_ledge':False,'rib_profile':'straight vertical rear edge, no fillets','rib_count':2,'rib_thickness':4,'rib_foot_rear_y':high.y})
+report={'valid':combined.isValid(),'solids':len(combined.Solids),'parts':1,'base_width':72.8,'base_rear_y':38,'base_blank_depth_before_front_trim':52,'front_trimmed_to_screen_mount_plane':True,'pcb_standoff_height':5,'pcb_standoff_diameter':6,'screen_rear_driver_clearance_diameter':5,'pcb_rear_driver_clearance_diameter':6,'pcb_rear_driver_clearance_length':140,'screen_supported_by':'four screws, no front lip','extra_base_screws':0,'printing':'screen-facing mounting plane directly on bed; one piece','mounting_plane_height_above_print_bed':-zmin,'connector_dimensions':'photo estimate','stability':'not validated; PCB mass moved higher'}
+report.update({'pcb_lower_y':board_y,'pcb_upper_y':board_y+52,'pcb_shift_up':board_shift,'screen_screw_row_edge_gap':3,'rib_top_local_y':rib_top_local_y,'screen_web_thickness':3,'lower_ledge':False,'rib_profile':'straight vertical rear edge, no fillets','rib_count':2,'rib_thickness':4,'rib_foot_rear_y':high.y})
 (REPORTS/'validation.json').write_text(json.dumps(report,ensure_ascii=False,indent=2))
 os.environ['MPLCONFIGDIR']='/private/tmp/screen_stand_mpl'
 import matplotlib
