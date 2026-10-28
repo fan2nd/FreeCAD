@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1640" viewBox="0 0 1800 1640"><defs><marker id="a" markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto-start-reverse"><path d="M7,0 L0,3.5 L7,7" fill="none" stroke="#19759c"/></marker></defs><rect width="1800" height="1640" fill="white"/><style>text{font-family:"PingFang SC","Arial",sans-serif;fill:#182e3e} .shape{stroke:#263a46;stroke-width:2.5;fill:#eff4f7} .dim{stroke:#19759c;stroke-width:1.4;fill:none} .ext{stroke:#87a3b3;stroke-width:1;fill:none}</style>
+<text x="55" y="55" font-size="36">推力计与笔 · 尺寸补全图</text>
+<text x="55" y="96" font-size="23">长度 mm / 角度 deg ｜ ✓ 已确认；≈ 推导；? 未确认占位 ｜ 尖角朝侧向，圆弧侧沉入</text>
+<text x="100" y="150" font-size="25">① 底板俯视：左侧固定推力计，右侧嵌放笔</text>
+<path d="M140 220 H1140 V450 H140 Z" class="shape"/>
+<circle cx="215" cy="280" r="7" fill="white" stroke="#263a46" stroke-width="2.5"/>
+<circle cx="215" cy="385" r="7" fill="white" stroke="#263a46" stroke-width="2.5"/>
+<circle cx="395" cy="280" r="7" fill="white" stroke="#263a46" stroke-width="2.5"/>
+<circle cx="395" cy="385" r="7" fill="white" stroke="#263a46" stroke-width="2.5"/>
+<path d="M505 220 V450" class="ext" stroke-dasharray="8,5"/>
+<path d="M640 312 H1060 V358 H640 Z" class="shape"/>
+<text x="245" y="420" font-size="19">推力计安装区</text>
+<text x="745" y="400" font-size="19">笔的圆弧盲槽</text>
+<path d="M140,190 L1140,190" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="648.0" y="181.0" font-size="19">C2</text>
+<path d="M110,220 L110,450" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="118.0" y="326.0" font-size="19">C1</text>
+<path d="M215,260 L395,260" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="313.0" y="251.0" font-size="19">H3</text>
+<path d="M425,280 L425,385" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="433.0" y="323.5" font-size="19">H2</text>
+<path d="M140,480 L215,480" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="185.5" y="471.0" font-size="19">H4−C9</text>
+<path d="M640,480 L1060,480" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="858.0" y="471.0" font-size="19">C5</text>
+<path d="M1060,510 L1140,510" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1108.0" y="501.0" font-size="19">C6</text>
+<text x="570" y="540" font-size="19">底面4×沉孔：⌀7.3 深2；螺丝处保留6，杯头突出1.6</text>
+<text x="1250" y="150" font-size="25">② 笔轴向截面 / 入槽</text>
+<path d="M1260 395 H1300 V382.4 H1380 Q1410 398 1440 382.4 H1650 V395 H1695 V495 H1260 Z" class="shape"/>
+<path d="M1446.53 282.4 A60 60 0 1 0 1446.53 377.6 L1508.57 330 Z" class="shape"/>
+<path d="M1240,382.4 L1730,382.4" class="dim"/>
+<text x="1550" y="365" font-size="19">槽区表面</text>
+<path d="M1350,240 L1508.57,240" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1437.2849999999999" y="231.0" font-size="19">B3</text>
+<path d="M1560,270 L1560,390" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1568.0" y="321.0" font-size="19">B1</text>
+<path d="M1610,382.4 L1610,390" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1618.0" y="377.2" font-size="19">C7</text>
+<text x="1530" y="430" font-size="19">沉入 1.41</text>
+<text x="1515" y="310" font-size="20">D1 = 75°</text>
+<text x="1290" y="535" font-size="20">C4 槽圆弧；C8 抬高 2.31</text>
+<text x="100" y="605" font-size="25">③ 推力计底视与笔顶视（端部相向）</text>
+<path d="M145 690 H470 V890 H145 Z" class="shape"/>
+<path d="M470 767 H530 V813 H470 Z" class="shape"/>
+<circle cx="210" cy="735" r="7" fill="white" stroke="#263a46" stroke-width="2.5"/>
+<circle cx="210" cy="845" r="7" fill="white" stroke="#263a46" stroke-width="2.5"/>
+<circle cx="390" cy="735" r="7" fill="white" stroke="#263a46" stroke-width="2.5"/>
+<circle cx="390" cy="845" r="7" fill="white" stroke="#263a46" stroke-width="2.5"/>
+<text x="170" y="922" font-size="20">底部 4 × ⌀H6，深 H5</text>
+<path d="M145,660 L470,660" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="315.5" y="651.0" font-size="19">A2</text>
+<path d="M115,690 L115,890" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="123.0" y="781.0" font-size="19">A1</text>
+<path d="M470,855 L530,855" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="508.0" y="846.0" font-size="19">A5</text>
+<text x="480" y="744" font-size="19">⌀A4</text>
+<path d="M590 768 H608 V782 H650 V735 H710 V710 H1200 V748 H1250 V832 H1200 V870 H710 V845 H650 V798 H608 V812 H590 Z" class="shape"/>
+<path d="M710,680 L1200,680" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="963.0" y="671.0" font-size="19">B2</text>
+<path d="M1290,710 L1290,870" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1298.0" y="781.0" font-size="19">B1</text>
+<path d="M1200,920 L1250,920" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1233.0" y="911.0" font-size="19">B11</text>
+<text x="1240" y="735" font-size="19">⌀B10</text>
+<path d="M650,925 L710,925" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="688.0" y="916.0" font-size="19">B5</text>
+<text x="635" y="704" font-size="19">⌀B4</text>
+<path d="M608,960 L650,960" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="637.0" y="951.0" font-size="19">B7</text>
+<text x="595" y="855" font-size="19">⌀B6</text>
+<text x="555" y="730" font-size="19">⌀B8</text>
+<text x="545" y="895" font-size="19">B9 头厚</text>
+<text x="1400" y="655" font-size="23">④ 测力轴高度</text>
+<path d="M1405 710 H1630 V840 H1405 Z" class="shape"/>
+<path d="M1630 778 H1700 V812 H1630 Z" class="shape"/>
+<path d="M1380,840 L1730,840" class="dim"/>
+<path d="M1600,795 L1730,795" class="ext"/>
+<path d="M1730,795 L1730,840" class="dim" marker-start="url(#a)" marker-end="url(#a)"/>
+<text x="1738.0" y="808.5" font-size="19">A6</text>
+<text x="1405" y="885" font-size="20">A3：机身厚度</text>
+<text x="1405" y="925" font-size="20">A6：轴心距机底</text>
+<path d="M55,1000 L1745,1000" class="ext"/>
+<text x="55" y="1043" font-size="25">尺寸状态（未确认项仍需补填）</text>
+<text x="55" y="1080" font-size="19">C1  底板宽</text>
+<text x="385" y="1080" font-size="19">? 70.00  ______</text>
+<text x="55" y="1112" font-size="19">C2  底板长</text>
+<text x="385" y="1112" font-size="19">≈ 233.00</text>
+<text x="55" y="1144" font-size="19">C3  底板厚</text>
+<text x="385" y="1144" font-size="19">? 8.00  ______</text>
+<text x="55" y="1176" font-size="19">H1  底板安装孔径</text>
+<text x="385" y="1176" font-size="19">? 4.50  ______</text>
+<text x="55" y="1208" font-size="19">H2  孔横距</text>
+<text x="385" y="1208" font-size="19">✓ 40.78</text>
+<text x="55" y="1240" font-size="19">H3  孔纵距</text>
+<text x="385" y="1240" font-size="19">✓ 72.75</text>
+<text x="55" y="1272" font-size="19">H4  上排孔距顶边</text>
+<text x="385" y="1272" font-size="19">✓ 17.40</text>
+<text x="55" y="1304" font-size="19">C4  槽圆弧半径</text>
+<text x="385" y="1304" font-size="19">≈ 11.40</text>
+<text x="55" y="1336" font-size="19">C5  槽长</text>
+<text x="385" y="1336" font-size="19">✓ 92.00</text>
+<text x="55" y="1368" font-size="19">C6  槽起点距尾边</text>
+<text x="385" y="1368" font-size="19">≈ 2.00</text>
+<text x="55" y="1400" font-size="19">C7  笔沉入深度</text>
+<text x="385" y="1400" font-size="19">✓ 1.41</text>
+<text x="55" y="1432" font-size="19">A1  推力计宽</text>
+<text x="385" y="1432" font-size="19">✓ 59.50</text>
+<text x="55" y="1464" font-size="19">A2  推力计长</text>
+<text x="385" y="1464" font-size="19">✓ 104.50</text>
+<text x="55" y="1496" font-size="19">A3  推力计厚</text>
+<text x="385" y="1496" font-size="19">✓ 30.50</text>
+<text x="635" y="1080" font-size="19">A4  测力轴直径</text>
+<text x="965" y="1080" font-size="19">✓ 15.10</text>
+<text x="635" y="1112" font-size="19">A5  测力轴伸出长</text>
+<text x="965" y="1112" font-size="19">✓ 18.00</text>
+<text x="635" y="1144" font-size="19">B1  笔身圆弧直径</text>
+<text x="965" y="1144" font-size="19">✓ 22.20</text>
+<text x="635" y="1176" font-size="19">B2  笔身长</text>
+<text x="965" y="1176" font-size="19">✓ 92.00</text>
+<text x="635" y="1208" font-size="19">B3  笔截面横向总宽</text>
+<text x="965" y="1208" font-size="19">≈ 29.33</text>
+<text x="635" y="1240" font-size="19">B4  笔肩直径</text>
+<text x="965" y="1240" font-size="19">✓ 19.20</text>
+<text x="635" y="1272" font-size="19">B5  笔肩长</text>
+<text x="965" y="1272" font-size="19">✓ 16.90</text>
+<text x="635" y="1304" font-size="19">B6  T杆直径</text>
+<text x="965" y="1304" font-size="19">? 5.00  ______</text>
+<text x="635" y="1336" font-size="19">B7  T杆长</text>
+<text x="965" y="1336" font-size="19">? 7.00  ______</text>
+<text x="635" y="1368" font-size="19">B8  T头直径</text>
+<text x="965" y="1368" font-size="19">? 12.00  ______</text>
+<text x="635" y="1400" font-size="19">B9  T头长</text>
+<text x="965" y="1400" font-size="19">? 3.00  ______</text>
+<text x="635" y="1432" font-size="19">B10  笔尾直径</text>
+<text x="965" y="1432" font-size="19">? 10.00  ______</text>
+<text x="635" y="1464" font-size="19">B11  笔尾长</text>
+<text x="965" y="1464" font-size="19">? 8.00  ______</text>
+<text x="635" y="1496" font-size="19">P1  笔主体起点距尾边</text>
+<text x="965" y="1496" font-size="19">≈ 2.00</text>
+<text x="1215" y="1080" font-size="19">H5  推力计底孔深</text>
+<text x="1545" y="1080" font-size="19">? 6.00  ______</text>
+<text x="1215" y="1112" font-size="19">H6  推力计底孔径</text>
+<text x="1545" y="1112" font-size="19">? 4.00  ______</text>
+<text x="1215" y="1144" font-size="19">A6  测力轴中心距机底</text>
+<text x="1545" y="1144" font-size="19">✓ 12.00</text>
+<text x="1215" y="1176" font-size="19">C8  笔槽区抬高</text>
+<text x="1545" y="1176" font-size="19">≈ 2.31</text>
+<text x="1215" y="1208" font-size="19">D1  截面相切角</text>
+<text x="1545" y="1208" font-size="19">✓ 75.00</text>
+<text x="1215" y="1240" font-size="19">C9  推力计端收短</text>
+<text x="1545" y="1240" font-size="19">≈ 10.40</text>
+<text x="1215" y="1272" font-size="19">H7  螺丝处板厚</text>
+<text x="1545" y="1272" font-size="19">✓ 6.00</text>
+<text x="1215" y="1304" font-size="19">H8  杯头沉孔直径</text>
+<text x="1545" y="1304" font-size="19">≈ 7.30</text>
+<text x="1215" y="1336" font-size="19">H9  杯头直径</text>
+<text x="1545" y="1336" font-size="19">✓ 6.70</text>
+<text x="1215" y="1368" font-size="19">H10  杯头高度</text>
+<text x="1545" y="1368" font-size="19">✓ 3.60</text>
+<text x="1215" y="1400" font-size="19">H11  杯头沉孔深度</text>
+<text x="1545" y="1400" font-size="19">≈ 2.00</text>
+<text x="55" y="1570" font-size="19">测量提示：H2 横向孔距，H3 沿笔轴方向孔距；H4 从推力计外端边量至近排孔中心。</text>
+<text x="55" y="1610" font-size="19">底板两端收短至233×70；推力计端悬出C9=10.4，外排孔距板端7。适配256×256打印平台。</text>
+</svg>

@@ -15,7 +15,8 @@ projects/<工程名>/（屏幕支架下再分 v1/、v2/）
 ## 屏幕支架
 
 | 版本 | 位置 | 说明 |
-| --- | --- | --- |
+| --- | --- |
+| `projects/slotted-plate/` | 推力计与笔槽板；参数化装配、打印文件及尺寸标注页面，部分尺寸待确认 | --- |
 | V1 | [projects/screen-stand/v1](projects/screen-stand/v1/) | 主板水平放置，屏幕中间四孔固定 |
 | V2 | [projects/screen-stand/v2](projects/screen-stand/v2/) | 主板背装、一体短底座、屏幕侧朝下打印 |
 

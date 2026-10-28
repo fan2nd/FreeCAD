@@ -1,0 +1,314 @@
+[
+  {
+    "id": "C1",
+    "name": "底板宽",
+    "nominal": 70,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "C2",
+    "name": "底板长",
+    "nominal": 233,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  },
+  {
+    "id": "C3",
+    "name": "底板厚",
+    "nominal": 8,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "H1",
+    "name": "底板安装孔径",
+    "nominal": 4.5,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "H2",
+    "name": "孔横距",
+    "nominal": 40.78,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "H3",
+    "name": "孔纵距",
+    "nominal": 72.75,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "H4",
+    "name": "上排孔距顶边",
+    "nominal": 17.4,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "C4",
+    "name": "槽圆弧半径",
+    "nominal": 11.4,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  },
+  {
+    "id": "C5",
+    "name": "槽长",
+    "nominal": 92,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "C6",
+    "name": "槽起点距尾边",
+    "nominal": 2,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  },
+  {
+    "id": "C7",
+    "name": "笔沉入深度",
+    "nominal": 1.41,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "A1",
+    "name": "推力计宽",
+    "nominal": 59.5,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "A2",
+    "name": "推力计长",
+    "nominal": 104.5,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "A3",
+    "name": "推力计厚",
+    "nominal": 30.5,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "A4",
+    "name": "测力轴直径",
+    "nominal": 15.1,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "A5",
+    "name": "测力轴伸出长",
+    "nominal": 18,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "B1",
+    "name": "笔身圆弧直径",
+    "nominal": 22.2,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "B2",
+    "name": "笔身长",
+    "nominal": 92,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "B3",
+    "name": "笔截面横向总宽",
+    "nominal": 29.333743911920852,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  },
+  {
+    "id": "B4",
+    "name": "笔肩直径",
+    "nominal": 19.2,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "B5",
+    "name": "笔肩长",
+    "nominal": 16.9,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "B6",
+    "name": "T杆直径",
+    "nominal": 5,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "B7",
+    "name": "T杆长",
+    "nominal": 7,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "B8",
+    "name": "T头直径",
+    "nominal": 12,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "B9",
+    "name": "T头长",
+    "nominal": 3,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "B10",
+    "name": "笔尾直径",
+    "nominal": 10,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "B11",
+    "name": "笔尾长",
+    "nominal": 8,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "P1",
+    "name": "笔主体起点距尾边",
+    "nominal": 2,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  },
+  {
+    "id": "H5",
+    "name": "推力计底孔深",
+    "nominal": 6,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "H6",
+    "name": "推力计底孔径",
+    "nominal": 4,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": false
+  },
+  {
+    "id": "A6",
+    "name": "测力轴中心距机底",
+    "nominal": 12,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "C8",
+    "name": "笔槽区抬高",
+    "nominal": 2.3100000000000005,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  },
+  {
+    "id": "D1",
+    "name": "截面相切角",
+    "nominal": 75,
+    "unit": "deg",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "C9",
+    "name": "推力计端收短",
+    "nominal": 10.4,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  },
+  {
+    "id": "H7",
+    "name": "螺丝处板厚",
+    "nominal": 6,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "H8",
+    "name": "杯头沉孔直径",
+    "nominal": 7.3,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  },
+  {
+    "id": "H9",
+    "name": "杯头直径",
+    "nominal": 6.7,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "H10",
+    "name": "杯头高度",
+    "nominal": 3.6,
+    "unit": "mm",
+    "confirmed": true,
+    "derived": false
+  },
+  {
+    "id": "H11",
+    "name": "杯头沉孔深度",
+    "nominal": 2,
+    "unit": "mm",
+    "confirmed": false,
+    "derived": true
+  }
+]
