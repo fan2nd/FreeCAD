@@ -1,0 +1,25 @@
+{
+  "cutoff": "2026-10-27T17:27:00+08:00",
+  "method": "reconstructed from historical modeling records; not an original backup",
+  "historical_volume_mm3": {
+    "Lower": 9653.747621737159,
+    "Upper": 5891.687307734708
+  },
+  "sha256": {
+    "models/上盖_一体悬臂.step": "1ef012eec632c6b394a9ebf0eff690031e4d5ee7ccd61b7a1e14c003ce408abd",
+    "models/下座.step": "4b60bd57a2ada5a8292a6e8cc8e634569e4f6ee6a79481b352e2fcecf6a7aad4",
+    "models/管路压力工装.FCStd": "bc8adc69acd75522cbb5414a4b43abebc623f74bcdf26a5ed5694f817f22bb48",
+    "models/管路压力工装_两件.step": "37bc02870a3504a61e8ecdde0f9bd5ce8c6700fcd39e9256e6fd3a38ebd51555",
+    "scripts/build.py": "05bcc6250fafcb327e7332f934576a494cd57b2731531d78c31c510aac631840",
+    "scripts/final_view.py": "413b6ba3ea6470be0fa8cc0420f0c6d757a893eaa4b5c9bfde5399806f59d26a",
+    "scripts/history.py": "b67d037b4c01b4d09bf906c5227c518eee128c61483a0e599255dc6761864daf",
+    "scripts/naming.py": "faa97afc749e4f29c2051748ee80ce22f845a7d932d2e4273a102a3a8386fcc3",
+    "scripts/render.py": "56a35646cab72146da32a048c3557d92b5676c026b6833ff0e5a21d5ef6f141d",
+    "scripts/rounded.py": "4449f98e7e461bd66b75892ebefb2e0d49d0f679e924f117d59b8e7c297a19a4",
+    "print/上盖_贴片面朝下.stl": "4082e22a326762db33d3f59ef50ea673a0d97ca97d84457d6606d13e8f2c9c03",
+    "print/下座_底面朝下.stl": "1030078cea8a7a5923a55d40170d7246494175d79f4f03c28825741b33e02a2d",
+    "previews/exploded.png": "bd1930af095052bec558b773094a650cae94152253121a09675c047b10c915c3",
+    "previews/exploded.svg": "04883fd9e4b1ac10caf86c64f5d6edfd65a7295f94e097c88b7cf029e2ef357f",
+    "previews/section.png": "15cfd81b013404a01a3d03ff510ff76f5fcbd29717ae10abdc9a4ecc9d5ced4f"
+  }
+}

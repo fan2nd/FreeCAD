@@ -1,0 +1,21 @@
+{
+  "source": "current project saved 2026-10-27 17:58:33 +08:00",
+  "method": "byte-for-byte copy",
+  "sha256": {
+    "models/下座.step": "16769e8f149a2c35a431563e426af6ca1807550365beaeace663eb030a71b86d",
+    "models/上盖_一体悬臂.step": "cb4d26efe63fb7590864e2ca293977409de899e3a13c7c346996c752d37611b0",
+    "models/管路压力工装_两件.step": "8129d268d8cd690c26f03fb1fb2cedf41184aefe0cc3e29682064f84a7edfd9f",
+    "models/管路压力工装.FCStd": "a4e7a30e1b859495bd40ec3287604eeba722255f47df453ce72ca2fba0bda6fa",
+    "print/上盖_贴片面朝下.stl": "87e22e6c028e0d65a6db6c3ec21d785ce62af06ccbf68720b07b15a3e807bf37",
+    "print/下座_底面朝下.stl": "3de9f1fe54d4d3559cf9282471a00fc2cc4b0dd1e13249da25b93e7b899bd2cc",
+    "scripts/build.py": "486af8f64858ff1073c6a008b575ff92ebeaa203ad206187bac7a4f0ebcd13e5",
+    "scripts/render.py": "8abdb5e2c51664e358b0a32598abc66ae85d930bd7d6dff54d5b432fb86aa182",
+    "scripts/naming.py": "faa97afc749e4f29c2051748ee80ce22f845a7d932d2e4273a102a3a8386fcc3",
+    "scripts/final_view.py": "413b6ba3ea6470be0fa8cc0420f0c6d757a893eaa4b5c9bfde5399806f59d26a",
+    "scripts/rounded.py": "4449f98e7e461bd66b75892ebefb2e0d49d0f679e924f117d59b8e7c297a19a4",
+    "scripts/history.py": "b86f37ef1b5c6a05ade53a0c279693d3d6f565a86197ac8885192c724ba2c5a0",
+    "previews/section.png": "4eb45b94f2baade2919b933c8e49f917f128e5f619cff7428ad0fb63f4028ced",
+    "previews/exploded.png": "367fbf1a3eae4b39238e2fb8ba408736d751c24778fc6f15b7605817eff3240f",
+    "previews/exploded.svg": "6c66ccf9cf4118be63e91f3cc01c01d7b0cf3792dd6fae98152e746ac5b41ecd"
+  }
+}
