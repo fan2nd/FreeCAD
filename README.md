@@ -25,6 +25,7 @@ projects/<工程名>/（有版本时先进入 v1/、v2/、v3/ 等目录）
 
 | 目录 | 内容 |
 | --- | --- |
+| `projects/pcie-box/` | PCIe x8半高双SFP网卡磁吸收纳盒；Ø4×2磁铁，参数化工程及打印文件 |
 | `projects/slotted-plate/` | 推力计与笔的凹槽底板；可编辑参数化装配、STEP 及尺寸补全图，尺寸暂定 |
 | `projects/power-myh4621/` | 电源底座与支架 |
 | `projects/h7s78-dk/` | H7S78 底座、盖板及圆角重建工程 |

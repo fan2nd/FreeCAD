@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1060" viewBox="0 0 1500 1060"><rect width="1500" height="1060" fill="white"/><style>text{font-family:"PingFang SC","Microsoft YaHei",sans-serif;fill:#243442}.title{font-size:30px;font-weight:600}.note{font-size:20px}.small{font-size:18px}.num{font-size:22px;font-weight:600;fill:#ba441d}</style><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto-start-reverse"><path d="M0,0 L8,4 L0,8" fill="none" stroke="#2478a2"/></marker></defs>
+<text x="75" y="55" class="title">背面螺丝定位 · 请填写中心坐标（mm）</text>
+<text x="75" y="92" class="note">背面朝上，挡片在右；螺丝位置仅示意，不要按图上比例量。</text>
+<polygon points="1146,170.0 150,170.0 150,502.70000000000005 588,502.70000000000005 588,583.4000000000001 816,583.4000000000001 816,538.7 828,538.7 828,583.4000000000001 894,583.4000000000001 894,502.70000000000005 924,502.70000000000005 924,550.7 966,550.7 966,502.70000000000005 1074,502.70000000000005 1074,550.7 1146,550.7" fill="#e5f2e9" stroke="#467565" stroke-width="3"/>
+<rect x="1154" y="170" width="20" height="440" fill="#d7dde2" stroke="#697782" stroke-width="2"/>
+<text x="1200" y="350" class="note">PCIe挡片</text>
+<text x="630" y="620" class="note">金手指方向 ↓</text>
+<line x1="150" y1="170" x2="1190" y2="170" stroke="#2478a2" stroke-width="2" />
+<line x1="150" y1="170" x2="150" y2="630" stroke="#2478a2" stroke-width="2" />
+<text x="157" y="150" class="note">上基准边（Y = 0）</text>
+<text x="75" y="660" class="note">左基准边 X = 0；原点为PCB左上角。X向右、Y向下，均量到螺丝中心。</text>
+<circle cx="174" cy="199.70000000000002" r="16" fill="white" stroke="#516c78" stroke-width="2"/>
+<line x1="164" y1="199.70000000000002" x2="184" y2="199.70000000000002" stroke="#516c78" stroke-width="2" />
+<line x1="174" y1="189.70000000000002" x2="174" y2="209.70000000000002" stroke="#516c78" stroke-width="2" />
+<text x="194" y="206.70000000000002" class="num">1</text>
+<circle cx="468" cy="199.70000000000002" r="16" fill="white" stroke="#516c78" stroke-width="2"/>
+<line x1="458" y1="199.70000000000002" x2="478" y2="199.70000000000002" stroke="#516c78" stroke-width="2" />
+<line x1="468" y1="189.70000000000002" x2="468" y2="209.70000000000002" stroke="#516c78" stroke-width="2" />
+<text x="488" y="206.70000000000002" class="num">2</text>
+<circle cx="828" cy="199.70000000000002" r="16" fill="white" stroke="#516c78" stroke-width="2"/>
+<line x1="818" y1="199.70000000000002" x2="838" y2="199.70000000000002" stroke="#516c78" stroke-width="2" />
+<line x1="828" y1="189.70000000000002" x2="828" y2="209.70000000000002" stroke="#516c78" stroke-width="2" />
+<text x="848" y="206.70000000000002" class="num">3</text>
+<circle cx="1104" cy="196.70000000000002" r="16" fill="white" stroke="#516c78" stroke-width="2"/>
+<line x1="1094" y1="196.70000000000002" x2="1114" y2="196.70000000000002" stroke="#516c78" stroke-width="2" />
+<line x1="1104" y1="186.70000000000002" x2="1104" y2="206.70000000000002" stroke="#516c78" stroke-width="2" />
+<text x="1124" y="203.70000000000002" class="num">4</text>
+<circle cx="174" cy="475.70000000000005" r="16" fill="white" stroke="#516c78" stroke-width="2"/>
+<line x1="164" y1="475.70000000000005" x2="184" y2="475.70000000000005" stroke="#516c78" stroke-width="2" />
+<line x1="174" y1="465.70000000000005" x2="174" y2="485.70000000000005" stroke="#516c78" stroke-width="2" />
+<text x="194" y="482.70000000000005" class="num">5</text>
+<circle cx="468" cy="475.70000000000005" r="16" fill="white" stroke="#516c78" stroke-width="2"/>
+<line x1="458" y1="475.70000000000005" x2="478" y2="475.70000000000005" stroke="#516c78" stroke-width="2" />
+<line x1="468" y1="465.70000000000005" x2="468" y2="485.70000000000005" stroke="#516c78" stroke-width="2" />
+<text x="488" y="482.70000000000005" class="num">6</text>
+<circle cx="828" cy="475.70000000000005" r="16" fill="white" stroke="#516c78" stroke-width="2"/>
+<line x1="818" y1="475.70000000000005" x2="838" y2="475.70000000000005" stroke="#516c78" stroke-width="2" />
+<line x1="828" y1="465.70000000000005" x2="828" y2="485.70000000000005" stroke="#516c78" stroke-width="2" />
+<text x="848" y="482.70000000000005" class="num">7</text>
+<circle cx="1104" cy="523.7" r="16" fill="white" stroke="#516c78" stroke-width="2"/>
+<line x1="1094" y1="523.7" x2="1114" y2="523.7" stroke="#516c78" stroke-width="2" />
+<line x1="1104" y1="513.7" x2="1104" y2="533.7" stroke="#516c78" stroke-width="2" />
+<text x="1124" y="530.7" class="num">8</text>
+<line x1="150" y1="130" x2="468" y2="130" stroke="#2478a2" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)" />
+<line x1="468" y1="122" x2="468" y2="199.70000000000002" stroke="#2478a2" stroke-width="2" stroke-dasharray="5 5" />
+<text x="287.0" y="121" class="note">X₂</text>
+<line x1="425" y1="170" x2="425" y2="199.70000000000002" stroke="#2478a2" stroke-width="2" marker-start="url(#arrow)" marker-end="url(#arrow)" />
+<text x="385" y="194" class="note">Y₂</text>
+<text x="75" y="710" class="note">填写下表即可；①②③⑤⑥⑦背面凸起1 mm，④⑧挡片侧凸起2 mm。</text>
+<text x="75" y="756" class="note">编号</text>
+<text x="203" y="756" class="note">X（距左边）</text>
+<text x="465" y="756" class="note">Y（距上边）</text>
+<text x="90" y="805" class="num">1</text>
+<text x="203" y="805" class="note">____________</text>
+<text x="465" y="805" class="note">____________</text>
+<text x="90" y="861" class="num">2</text>
+<text x="203" y="861" class="note">____________</text>
+<text x="465" y="861" class="note">____________</text>
+<text x="90" y="917" class="num">3</text>
+<text x="203" y="917" class="note">____________</text>
+<text x="465" y="917" class="note">____________</text>
+<text x="90" y="973" class="num">4</text>
+<text x="203" y="973" class="note">____________</text>
+<text x="465" y="973" class="note">____________</text>
+<text x="775" y="756" class="note">编号</text>
+<text x="903" y="756" class="note">X（距左边）</text>
+<text x="1165" y="756" class="note">Y（距上边）</text>
+<text x="790" y="805" class="num">5</text>
+<text x="903" y="805" class="note">____________</text>
+<text x="1165" y="805" class="note">____________</text>
+<text x="790" y="861" class="num">6</text>
+<text x="903" y="861" class="note">____________</text>
+<text x="1165" y="861" class="note">____________</text>
+<text x="790" y="917" class="num">7</text>
+<text x="903" y="917" class="note">____________</text>
+<text x="1165" y="917" class="note">____________</text>
+<text x="790" y="973" class="num">8</text>
+<text x="903" y="973" class="note">____________</text>
+<text x="1165" y="973" class="note">____________</text>
+<text x="75" y="1040" class="small">已知PCB长度166 mm；只需补螺丝中心位置，不用重标标准轮廓。</text>
+</svg>
