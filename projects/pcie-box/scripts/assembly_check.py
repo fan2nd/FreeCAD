@@ -72,7 +72,7 @@ for idx in (1,2):
  rectangle(ss,cq('SFPHeight')+'-2 mm',cq('SFPWidth')+'-2 mm','-('+TOP+'+'+cq('SFPHeight')+'/2)',yy)
  feat(b,ss,'端口','2 mm','Pocket',True)
 # Screw centers measured from PCB upper-left in backside view; mirrored to front-model coordinates.
-screw_positions=[(86,28.45),(37.5,28.45),(-14.5,28.45),(86,-17.55),(37.5,-17.55),(-14.5,-17.55),(-66,28.45),(-71,-26.05)]
+screw_positions=[(86,28.45),(37.5,28.45),(-24.5,28.45),(86,-17.55),(37.5,-17.55),(-24.5,-17.55),(-71,28.45),(-71,-26.05)]
 for idx,(x,y) in enumerate(screw_positions,1):
  b=body('Screw'+str(idx),'螺丝'+str(idx),(0.7,0.73,0.76));s=sketch(b,'螺丝头轮廓',B)
  n=s.addGeometry(Part.Circle(A.Vector(x,y,0),A.Vector(0,0,1),2.8),False)
@@ -106,7 +106,7 @@ result['cover_contact']=True;result['eight_screw_contacts']=True
 assert bracket.Shape.BoundBox.ZMax < lid.Shape.BoundBox.ZMax
 result['bracket_below_lid_top_mm']=lid.Shape.BoundBox.ZMax-bracket.Shape.BoundBox.ZMax
 result['ear_roof_mm']=float(p.Dim_Lid)-float(p.Dim_EarDepth)
-assert result['ear_roof_mm']>=1-1e-6
+assert result['ear_roof_mm']>=2-1e-6
 result['fully_constrained']=all(o.FullyConstrained for o in doc.Objects if o.TypeId=='Sketcher::SketchObject')
 assert result['fully_constrained']
 notes=doc.addObject('Spreadsheet::Sheet','FitNotes');notes.Label='装配检查'
