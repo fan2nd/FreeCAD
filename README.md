@@ -1,6 +1,6 @@
 # FreeCAD 工程集合
 
-每个工程放在 `projects/<工程名>/`。每个工程内部按用途统一分目录；各工程的版本目录各自使用相同结构。
+每个工程放在 `projects/<工程名>/`，每个 project 只保留一个主 `.FCStd`，零件、装配和可编辑历史统一包含在其中。每个工程内部按用途统一分目录；各工程的版本目录各自使用相同结构。
 
 ```text
 projects/<工程名>/（有版本时先进入 v1/、v2/、v3/ 等目录）
@@ -27,7 +27,8 @@ projects/<工程名>/（有版本时先进入 v1/、v2/、v3/ 等目录）
 | --- | --- |
 | `projects/pcie-box/` | PCIe x8半高双SFP网卡磁吸收纳盒；Ø4×2磁铁，参数化工程及打印文件 |
 | `projects/slotted-plate/` | 推力计与笔的凹槽底板；可编辑参数化装配、STEP 及尺寸补全图，尺寸暂定 |
-| `projects/power-myh4621/` | 电源底座与支架 |
+| `projects/power-myh4621/` | 原 4621 电机底座与支架；出线缺口改为上沿8 mm深 |
+| `projects/4621-cw32/` | 4621-cw32 新支架，带一体驱动板安装座 |
 | `projects/h7s78-dk/` | H7S78 底座、盖板及圆角重建工程 |
 | `projects/nucleo/` | Nucleo 底座 |
 | `projects/xilinx-ft232/` | Xilinx FT232 支架 |
@@ -72,7 +73,7 @@ projects/<工程名>/（有版本时先进入 v1/、v2/、v3/ 等目录）
 
 - 通用约束见 [AGENTS.md](AGENTS.md)，管路工装专用约束见 [管路工装约束](projects/tube-pressure-fixture/AGENTS.md)。FreeCAD 参数表的“数值”和“单位”分别放在独立列；文字说明另列或另表存放。
 - 提交工程、构建脚本、预览和打印文件，以及本说明和 `.gitignore`。
-- `models/` 中有意保留的原始模型（如 `h7s78-dk-original.FCStd`）是重建输入，不是自动备份。
+- 当前 project 不额外保存原始输入或单件 `.FCStd`；统一到唯一工程内。历史原始模型按归档规则保留，不作为第二份当前工程。
 - 脚本根据自身位置定位工程目录，输出到对应分类目录，不再使用 `output/`。
 - 自动备份、缓存、临时文件、`reports/` 和 `.local/` 由 [.gitignore](.gitignore) 排除。
 - 本次仅整理路径和脚本，不改变 CAD 几何；FreeCAD 最近文件列表可能需要重新选择新位置。
