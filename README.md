@@ -7,6 +7,7 @@ projects/<工程名>/（有版本时先进入 v1/、v2/、v3/ 等目录）
 ├── models/     FreeCAD 工程和 STEP 模型
 ├── scripts/    构建及预览生成脚本
 ├── previews/   PNG、SVG 预览
+├── references/ 原始参考草图、尺寸图和规格资料
 └── print/      STL、3MF 打印文件
 ```
 
