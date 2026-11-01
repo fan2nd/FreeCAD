@@ -10,7 +10,7 @@ p=d.addObject('Spreadsheet::Sheet','Params');p.Label='尺寸参数'
 rows=[
 ('外径',34.6,'OD','图纸'),('后端直径',33.5,'RearD','图纸'),
 ('机身厚',15,'Length','图纸，不含凸台'),('后端台阶厚',1,'Step','图纸淡字按1读取'),
-('凸台直径',12,'BossD','图纸'),('凸台高',3,'BossH','图纸'),
+('磁铁直径',12,'BossD','图纸；用户确认凸台为磁铁'),('磁铁高',3,'BossH','图纸；用户确认凸台为磁铁'),
 ('中心孔径',4.5,'Bore','图纸；贯通为假设'),('前端沉孔径',6.4,'CounterD','图纸'),
 ('后孔横距',16,'RearX','图纸'),('后孔纵距',20.5,'RearY','图纸'),
 ('后双孔分布圆',29.5,'RearPCD','图纸，沿Y方向'),('前方孔距',10.5,'FrontPitch','图纸'),
@@ -26,7 +26,7 @@ for i,(label,val,alias,note) in enumerate(rows,2):
     p.set('A'+str(i),label);p.set('B'+str(i),str(val));p.setAlias('B'+str(i),alias);p.set('C'+str(i),'mm');p.set('D'+str(i),note)
 p.setColumnWidth('A',150);p.setColumnWidth('B',80);p.setColumnWidth('C',60);p.setColumnWidth('D',300)
 n=d.addObject('Spreadsheet::Sheet','Notes');n.Label='说明'
-notes=['尺寸参数表驱动几何；所有数值单位均独立列出。','安装外形模型，整体作为一个实体；未推定内部定子、磁钢、绕组和轴承。','Z=0 为凸台侧机身端面，机身至Z=15，凸台至Z=-3；总长18。','凸台侧：4×M2，16×20.5矩形；2×M2.5，Ø29.5分布圆上下两孔。','另一侧：4×M2.5，10.5×10.5正方形；4×M2，Ø12.5分布圆四等分。','螺纹均用名义直径圆柱盲孔表达，孔深3为假设；不得据此确定螺钉最大旋入深度。','Ø4.5按中心通孔、Ø6.4按前端浅沉孔理解；原图未给剖面，待实物确认。','环槽、矩形出线浅槽和孔深按外观补全；无公差、材料和制造细节定义。']
+notes=['尺寸参数表驱动几何；所有数值单位均独立列出。','电机安装外形作为一个实体；用户确认后端Ø12×3凸台为磁铁，不推定其余内部结构。','Z=0 为凸台侧机身端面，机身至Z=15，凸台至Z=-3；总长18。','凸台侧：4×M2，16×20.5矩形；2×M2.5，Ø29.5分布圆上下两孔。','另一侧：4×M2.5，10.5×10.5正方形；4×M2，Ø12.5分布圆四等分。','螺纹均用名义直径圆柱盲孔表达，孔深3为假设；不得据此确定螺钉最大旋入深度。','Ø4.5按中心通孔、Ø6.4按前端浅沉孔理解；原图未给剖面，待实物确认。','环槽、矩形出线浅槽和孔深按外观补全；无公差、材料和制造细节定义。']
 for i,t in enumerate(notes,1):n.set('A'+str(i),t)
 n.setColumnWidth('A',850)
 d.recompute()
@@ -112,10 +112,12 @@ if A.GuiUp:
     for tree in G.getMainWindow().findChildren(QtWidgets.QTreeWidget):
         tree.collapseAll()
         if tree.topLevelItemCount():tree.expandItem(tree.topLevelItem(0))
-d.recompute();d.saveAs(str(ROOT/'models/HT2806.FCStd'))
+d.recompute()
 import runpy
 runpy.run_path(str(ROOT/'scripts/specifications.py'))['update'](d)
-d.save()
+runpy.run_path(str(ROOT/'scripts/mount.py'))['build'](d)
+d.Boss.Label='磁铁';d.BossSketch.Label='磁铁轮廓'
+d.recompute();d.saveAs(str(ROOT/'models/HT2806.FCStd'))
 if A.GuiUp:
     import runpy
     runpy.run_path(str(ROOT/'scripts/final_view.py'))
