@@ -25,7 +25,7 @@ def build():
             if d.getObject(name):d.removeObject(name)
     d.Upright.Tip=d.PilotPattern
     d.WireSketch.setExpression('Placement.Base.y',None)
-    for name in ['WireMouthFillet','WireRamp','RampInner','RampOuter','Bevel','BevelEnd','BevelStart','BoardPocket','BoardHoles','SeatPad','SeatSketch','ReliefPocket','ReliefSketch','Notes','Params']:
+    for name in ['WireMouthFillet','WireRamp','RampInner','RampOuter','Bevel','BevelEnd','BevelStart','BoardPocket','BoardHoles','SeatLoft2','SeatTop2','SeatRoot2','SeatLoft','SeatTop','SeatPad','SeatSketch','ReliefPocket','ReliefSketch','Notes','Params']:
         if d.getObject(name):d.removeObject(name)
 
     # Remove obsolete independent-encoder mounting features only in this new document.
@@ -45,7 +45,7 @@ def build():
     d.EncoderHole.Label='中央孔'
     d.recompute()
     p=d.addObject('Spreadsheet::Sheet','Params'); p.Label='安装参数'
-    rows=[('磁铁凸出上限', 1, 'mm', 'MagnetMax'), ('封装表面最小间隙', '=BoardBack-SensorH-MagnetMax', 'mm', 'Gap'), ('编码器封装高度', 1.75, 'mm', 'SensorH'), ('板孔距', 19, 'mm', 'BoardPitch'), ('自攻导孔直径', 2.0, 'mm', 'BoardHole'), ('电机孔对角距', 38, 'mm', 'MotorPitch'), ('电机螺丝通孔', 3.4, 'mm', 'MotorHole'), ('板厚', 1.6, 'mm', 'BoardT'), ('板直径', 32, 'mm', 'BoardD'), ('接触台直径', 5.2, 'mm', 'SeatD'), ('径向间隙', 0.4, 'mm', 'RadialGap'), ('元件槽深', 3.5, 'mm', 'ReliefDepth'), ('螺丝头高', 1, 'mm', 'HeadH'), ('板背位置', '=StandBack-BoardT', 'mm', 'BoardBack'), ('立板背面位置', 6, 'mm', 'StandBack'), ('板安装角度', 135, 'deg', 'BoardAngle'), ('凸起直径', 16, 'mm', 'BossOD'), ('凸起径向余量', 0.2, 'mm', 'BossClearance'), ('斜面深度', '=BevelOuterR-BevelInnerR', 'mm', 'BevelDepth'), ('斜面入口半径', 8.2, 'mm', 'BevelOuterR'), ('斜面末端半径', 6.9, 'mm', 'BevelInnerR'), ('支柱角度', '=BoardAngle+90', 'deg', 'MountAngle'), ('缺口深度', 12, 'mm', 'NotchDepth'), ('螺丝头下长度', 6, 'mm', 'ScrewL')]
+    rows=[('磁铁凸出上限', 1, 'mm', 'MagnetMax'), ('封装表面最小间隙', '=BoardBack-SensorH-MagnetMax', 'mm', 'Gap'), ('编码器封装高度', 1.75, 'mm', 'SensorH'), ('板孔距', 19, 'mm', 'BoardPitch'), ('自攻导孔直径', 2.0, 'mm', 'BoardHole'), ('电机孔对角距', 38, 'mm', 'MotorPitch'), ('电机螺丝通孔', 3.4, 'mm', 'MotorHole'), ('板厚', 1.6, 'mm', 'BoardT'), ('板直径', 32, 'mm', 'BoardD'), ('支柱根部直径', 5.2, 'mm', 'SeatD'), ('支柱接触端直径', 4.0, 'mm', 'SeatTopD'), ('径向间隙', 0.4, 'mm', 'RadialGap'), ('元件槽深', 3.5, 'mm', 'ReliefDepth'), ('螺丝头高', 1, 'mm', 'HeadH'), ('板背位置', '=StandBack-BoardT', 'mm', 'BoardBack'), ('立板背面位置', 6, 'mm', 'StandBack'), ('板安装角度', 135, 'deg', 'BoardAngle'), ('凸起直径', 16, 'mm', 'BossOD'), ('凸起径向余量', 0.2, 'mm', 'BossClearance'), ('斜面深度', '=BevelOuterR-BevelInnerR', 'mm', 'BevelDepth'), ('斜面入口半径', 8.2, 'mm', 'BevelOuterR'), ('斜面末端半径', 6.9, 'mm', 'BevelInnerR'), ('支柱角度', '=BoardAngle+90', 'deg', 'MountAngle'), ('缺口深度', 12, 'mm', 'NotchDepth'), ('螺丝头下长度', 6, 'mm', 'ScrewL')]
     for c,s in zip('ABCD',['参数','数值','单位','说明']): p.set(c+'1',s)
     for i,(label,val,unit,alias) in enumerate(rows,2):
         p.set('A'+str(i),label);p.set('B'+str(i),str(val));p.setAlias('B'+str(i),alias);p.set('C'+str(i),unit)
@@ -54,7 +54,7 @@ def build():
     p.set('D4','常见SOIC8高度包络，需核对实际焊后高度')
     p.setColumnWidth('A',150);p.setColumnWidth('B',85);p.setColumnWidth('C',65);p.setColumnWidth('D',420)
     notes=d.addObject('Spreadsheet::Sheet','Notes');notes.Label='装配说明'
-    texts=['底板64×55×6，长度与立板一致；外围四孔取消，仅保留两个立板连接沉孔。', '板固定两颗M2.5自攻、电机固定两颗M3，分别占两条垂直对角线，X字排布。', '独立新支架；原独立编码器四孔及方凹位取消，中央孔Ø16.4、无矩形支臂。', '选用较小的一对板孔，图纸Ø2.6，对应M2.5自攻；中心距19，支柱导孔暂定Ø2.0，按牙型和材料试配。', '两根Ø5.2支柱连接圆孔边缘；电机侧入口Ø16.4并以45度向内收小，无独立垫片。', '用户确认入口直径16.4，向内45度收小；深1.3后直径13.8，深入1 mm处直径14.4。此形状不提供Ø16直柱凸起的完整容纳空间。', 'A/B/C电机接口及电机线朝上，通过上沿14 mm宽、12 mm深直通缺口；取消走线斜坡，为U/V/W三个焊孔留出线空间；底部封平。CW32正面朝外。', 'PCB正面与立板背面齐平，板背位置4.4，SOP8包络暂按1.75；磁铁凸出小于1，封装表面机械间距约1.65–2.65 mm。', 'M2.5×6自攻，板厚1.6时进入塑料4.4，尖端恰好到电机贴合面，长度余量为0；板孔周需无元件。', '电机贴合面朝下打印；斜面45度，无螺母槽桥接，原底部横孔收口需切片核对。', '参考PCB不包含元件与接线包络，实际焊后高度、磁性能及自攻配合需试装验证。']
+    texts=['底板64×55×6，长度与立板一致；外围四孔取消，仅保留两个立板连接沉孔。', '板固定两颗M2.5自攻、电机固定两颗M3，分别占两条垂直对角线，X字排布。', '独立新支架；原独立编码器四孔及方凹位取消，中央孔Ø16.4、无矩形支臂。', '选用较小的一对板孔，图纸Ø2.6，对应M2.5自攻；中心距19，支柱导孔暂定Ø2.0，按牙型和材料试配。', '两根锥形支柱根部Ø5.2、PCB接触端Ø4.0，连接圆孔边缘；电机侧入口Ø16.4并以45度向内收小，无独立垫片。', '用户确认入口直径16.4，向内45度收小；深1.3后直径13.8，深入1 mm处直径14.4。此形状不提供Ø16直柱凸起的完整容纳空间。', 'A/B/C电机接口及电机线朝上，通过上沿14 mm宽、12 mm深直通缺口；取消走线斜坡，为U/V/W三个焊孔留出线空间；底部封平。CW32正面朝外。', 'PCB正面与立板背面齐平，板背位置4.4，SOP8包络暂按1.75；磁铁凸出小于1，封装表面机械间距约1.65–2.65 mm。', 'M2.5×6自攻，板厚1.6时进入塑料4.4，尖端恰好到电机贴合面，长度余量为0；板孔周需无元件。', '电机贴合面朝下打印；斜面45度，无螺母槽桥接，原底部横孔收口需切片核对。', '参考PCB不包含元件与接线包络，实际焊后高度、磁性能及自攻配合需试装验证。']
     for i,t in enumerate(texts,1):notes.set('A'+str(i),t)
     notes.setColumnWidth('A',850)
     d.WireSketch.setExpression('Placement.Base.y','23 - Params.NotchDepth - 13')
@@ -94,11 +94,18 @@ def build():
     f=feat(s,'ReliefPocket','元件槽','Pocket','Params.ReliefDepth',True)
     front='Params.StandBack'
     top='Params.StandBack - Params.BoardBack'
-    s=sk('SeatSketch','支柱轮廓',front)
-    for sign in [-1,1]:circ(s,sign*9.5,0,2.6,xe=f'{sign} * Params.BoardPitch / 2',re='Params.SeatD / 2')
-    s.Placement.Rotation=A.Rotation(V(0,0,1),225)
-    s.setExpression('Placement.Rotation.Angle','Params.MountAngle')
-    f=feat(s,'SeatPad','支柱','Pad','Params.BoardBack',True)
+    for sign,root_name,top_name,loft_name in [(-1,'SeatSketch','SeatTop','SeatLoft'),(1,'SeatRoot2','SeatTop2','SeatLoft2')]:
+        previous=b.Tip
+        root=sk(root_name,'柱根轮廓',front)
+        tip=sk(top_name,'柱顶轮廓',top)
+        for profile,diameter in [(root,'SeatD'),(tip,'SeatTopD')]:
+            circ(profile,sign*9.5,0,2.6 if profile==root else 2.0,xe=f'{sign} * Params.BoardPitch / 2',re=f'Params.{diameter} / 2')
+            profile.Placement.Rotation=A.Rotation(V(0,0,1),225)
+            profile.setExpression('Placement.Rotation.Angle','Params.MountAngle')
+        f=b.newObject('PartDesign::AdditiveLoft',loft_name);f.Label='锥形支柱' if sign<0 else '锥形支柱2'
+        f.Profile=root;f.Sections=[tip];f.Ruled=True;f.Refine=True
+        d.recompute();root.Visibility=False;tip.Visibility=False;previous.Visibility=False
+        assert not f.Shape.isNull() and f.Shape.isValid() and len(f.Shape.Solids)==1
     s=sk('BoardHoles','板孔位',top)
     for sign in [-1,1]:circ(s,sign*9.5,0,1.0,xe=f'{sign} * Params.BoardPitch / 2',re='Params.BoardHole / 2')
     s.Placement.Rotation=A.Rotation(V(0,0,1),225)
@@ -161,6 +168,9 @@ def build():
         assert shape.isInside(V(x,y,4.5),1e-6,True), 'Unused motor hole remains'
     axis=d.SeatSketch.Placement.Rotation.multVec(V(1,0,0))
     assert abs(axis.dot(V(1,-1,0)))<1e-6, 'Mounting axes are not perpendicular'
+    report['support_root_diameter_mm']=float(p.SeatD)
+    report['support_tip_diameter_mm']=float(p.SeatTopD)
+    report['component_clearance_verified']=False # Image does not define component heights/outlines.
     report['motor_screws']=2;report['board_screws']=2;report['mounting_layout']='X; perpendicular diagonal pairs'
     bevel_tool=Part.makeCone(float(p.BevelOuterR),float(p.BevelInnerR),float(p.BevelDepth),V(0,0,6),V(0,0,-1))
     assert shape.common(bevel_tool).Volume<1e-7
