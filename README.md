@@ -25,7 +25,8 @@ projects/<工程名>/（有版本时先进入 v1/、v2/、v3/ 等目录）
 
 | 目录 | 内容 |
 | --- | --- |
-| `projects/air-outlet-adapter/` | 出风口转接：28×56 mm、R2.5 矩形口转 Ø65/63 mm 台阶圆口，10 mm 插入限位 |
+| `projects/ht2806/` | HT2806 电机安装外形，Ø34.6×15、后凸台Ø12×3，参数化历史及STEP |
+| `projects/air-outlet-adapter/` | 出风口转接：28×56 mm、R2.5 矩形口转 Ø65/63 mm 台阶圆口，R50弧形延伸进风口及限位肩 |
 | `projects/pcie-box/` | PCIe x8半高双SFP网卡磁吸收纳盒；Ø4×2磁铁，参数化工程及打印文件 |
 | `projects/slotted-plate/` | 推力计与笔的凹槽底板；可编辑参数化装配、STEP 及尺寸补全图，尺寸暂定 |
 | `projects/power-myh4621/` | 原 4621 电机底座与支架；出线缺口改为上沿8 mm深 |
